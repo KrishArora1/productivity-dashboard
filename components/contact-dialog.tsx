@@ -116,14 +116,14 @@ export default function ContactDialog({ member, open, onOpenChange }: ContactDia
 
           {/* Manager info */}
           <div className="rounded-lg border p-4">
-            <h3 className="text-sm font-medium mb-2">Reports To</h3>
-            <div className="flex items-center gap-2">
-              <Avatar className="h-8 w-8">
+            <h3 className="text-sm font-medium mb-3">Reports To</h3>
+            <div className="flex items-center gap-3">
+              <Avatar className="h-8 w-8 shrink-0">
                 <AvatarFallback>{contactInfo.manager.charAt(0)}</AvatarFallback>
               </Avatar>
-              <div>
-                <p className="text-sm font-medium">{contactInfo.manager}</p>
-                <p className="text-xs text-muted-foreground">Manager</p>
+              <div className="flex flex-col gap-0.5">
+                <p className="text-sm font-medium leading-none">{contactInfo.manager}</p>
+                <p className="text-xs text-muted-foreground leading-none">Manager</p>
               </div>
             </div>
           </div>
