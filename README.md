@@ -1,6 +1,7 @@
 # Productivity Dashboard
 
 A modern, responsive dashboard for tracking team productivity metrics. Built with Next.js, TypeScript, and Tailwind CSS.
+Click Here for Live Demo: https://productivity-dashboard-opal.vercel.app/
 
 ## Features
 
@@ -44,9 +45,6 @@ pnpm install
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -60,14 +58,6 @@ productivity-dashboard/
 ├── public/             # Static assets
 └── styles/             # Global styles
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## License
 
