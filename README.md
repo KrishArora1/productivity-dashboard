@@ -1,6 +1,7 @@
 # Productivity Dashboard
 
 A modern, responsive dashboard for tracking team productivity metrics. Built with Next.js, TypeScript, and Tailwind CSS.
+
 Click Here for Live Demo: https://productivity-dashboard-opal.vercel.app/
 
 ## Features
@@ -36,8 +37,6 @@ cd productivity-dashboard
 npm install
 # or
 yarn install
-# or
-pnpm install
 ```
 
 3. Run the development server:
@@ -45,6 +44,7 @@ pnpm install
 npm run dev
 # or
 yarn dev
+```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
