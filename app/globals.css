@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+
+    /* Chart colors - professional palette */
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 24.6 95% 53.1%;
+    --chart-3: 142.1 76.2% 36.3%;
+    --chart-4: 262.1 83.3% 57.8%;
+    --chart-5: 187 100% 42.2%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+
+    /* Chart colors - dark mode professional palette */
+    --chart-1: 217.2 91.2% 59.8%;
+    --chart-2: 24.6 95% 53.1%;
+    --chart-3: 142.1 70.6% 45.3%;
+    --chart-4: 262.1 83.3% 68.2%;
+    --chart-5: 187 100% 42.2%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Import Geist fonts */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Base typography styles */
+@layer base {
+  html {
+    font-family: 'Geist Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Heading styles */
+  h1 {
+    @apply text-4xl font-semibold tracking-tight;
+    line-height: 1.2;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold tracking-tight;
+    line-height: 1.3;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold tracking-tight;
+    line-height: 1.4;
+  }
+
+  h4 {
+    @apply text-xl font-semibold tracking-tight;
+    line-height: 1.4;
+  }
+
+  h5 {
+    @apply text-lg font-semibold tracking-tight;
+    line-height: 1.4;
+  }
+
+  h6 {
+    @apply text-base font-semibold tracking-tight;
+    line-height: 1.4;
+  }
+
+  /* Body text styles */
+  p {
+    @apply text-base leading-relaxed;
+    margin-bottom: 1rem;
+  }
+
+  /* Small text styles */
+  small {
+    @apply text-sm leading-normal;
+  }
+
+  /* Form element typography */
+  input, textarea, select, button {
+    @apply text-base leading-normal;
+    font-family: 'Geist Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  /* Table typography */
+  table {
+    @apply text-sm leading-normal;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+  }
+
+  th {
+    @apply font-semibold text-left;
+  }
+
+  td {
+    @apply text-muted-foreground;
+  }
+
+  /* Code typography */
+  code, pre {
+    font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    @apply text-sm leading-normal;
+  }
+
+  /* List typography */
+  ul, ol {
+    @apply text-base leading-relaxed;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    @apply mb-1;
+  }
+
+  /* Link typography */
+  a {
+    @apply text-primary hover:text-primary/80 transition-colors;
+  }
+
+  /* Card typography */
+  .card-title {
+    @apply text-lg font-semibold tracking-tight;
+  }
+
+  .card-description {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* Badge typography */
+  .badge {
+    @apply text-xs font-medium;
+  }
+
+  /* Button typography */
+  .button {
+    @apply text-sm font-medium;
+  }
+}
